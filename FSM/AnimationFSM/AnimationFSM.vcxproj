@@ -20,6 +20,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnimatedSprite.h" />
+    <ClInclude Include="Crouching.h" />
+    <ClInclude Include="Falling.h" />
+    <ClInclude Include="Landing.h" />
     <ClInclude Include="PlayerFSM.h" />
     <ClInclude Include="Climbing.h" />
     <ClInclude Include="Debug.h" />
@@ -28,6 +31,7 @@
     <ClInclude Include="Jumping.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="State.h" />
+    <ClInclude Include="Walking.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AnimatedSprite.cpp" />

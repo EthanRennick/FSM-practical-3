@@ -10,6 +10,7 @@ void Jumping::idle(PlayerFSM* a)
 	a->setCurrent(new Idle());
 	delete this;
 }
+
 void Jumping::climbing(PlayerFSM* a)
 {
 	std::cout << "Jumping -> Climbing" << std::endl;

@@ -42,3 +42,7 @@ void PlayerFSM::climbing()
 {
 	m_current->climbing(this);
 }
+
+void PlayerFSM::walking()
+{
+}
