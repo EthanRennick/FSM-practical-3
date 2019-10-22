@@ -15,6 +15,8 @@ void Idle::jumping(PlayerFSM* a)
 	std::cout << "Idle -> Jumping" << std::endl;
 	a->setCurrent(new Jumping());
 	delete this;
+
+	a->setPrevious(new Jumping);
 }
 void Idle::climbing(PlayerFSM* a)
 {

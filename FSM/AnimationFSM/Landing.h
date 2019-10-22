@@ -13,10 +13,7 @@ public:
 
 
 	//can go from idle to jumping / climbing
-	void jumping(PlayerFSM* a);
-	void crouching(PlayerFSM* a);
 	void idle(PlayerFSM* a);
-	void walking(PlayerFSM* a);
 
 
 };

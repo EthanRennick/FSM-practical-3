@@ -11,7 +11,7 @@ int main()
 {
 	// Create the main window
 	sf::RenderWindow window(sf::VideoMode(800, 600), "SFML window");
-
+	bool jumping = false;
 	// Load a sprite to display
 	sf::Texture texture;
 	if (!texture.loadFromFile("assets\\grid.png")) {
@@ -62,10 +62,10 @@ int main()
 				{
 					input.setCurrent(Input::Action::DOWN);
 				}
-				else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+				/*else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
 				{
 					input.setCurrent(Input::Action::SPACE);
-				}
+				}*/
 				break;
 			default:
 				input.setCurrent(Input::Action::IDLE);

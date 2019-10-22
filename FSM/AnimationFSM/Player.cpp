@@ -2,6 +2,7 @@
 #include <Player.h>
 #include <Idle.h>
 #include <Debug.h>
+#include "Falling.h"
 
 Player::Player() //dfault constructor creates machine to idle
 {
@@ -36,15 +37,17 @@ void Player::handleInput(Input in)
 		m_state.idle();
 		break;
 	case Input::Action::UP:
-		//std::cout << "Player Up" << std::endl;
-		m_state.climbing();
+		//std::cout << "Player jumping" << std::endl;
+		m_state.jumping();
+		m_state.falling();
+		m_state.landing();
 		break;
 	case Input::Action::LEFT:
-		//std::cout << "Player Left" << std::endl;
-		m_state.walking();
+		//std::cout << "Player walking" << std::endl;
+		m_state.climbing();
 		break;
 	case Input::Action::RIGHT:
-		//std::cout << "Player Idling" << std::endl;
+		//std::cout << "Player walking" << std::endl;
 		m_state.walking();
 		break;
 	case Input::Action::DOWN:
@@ -53,11 +56,15 @@ void Player::handleInput(Input in)
 		break;
 	case Input::Action::SPACE:
 		//std::cout << "Player jumping" << std::endl;
-		m_state.jumping();
+		m_state.climbing();
 		break;
 	default:
+		m_state.idle();
+
 		break;
 	}
+
+	
 }
 
 void Player::update()
