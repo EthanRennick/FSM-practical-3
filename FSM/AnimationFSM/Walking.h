@@ -10,11 +10,9 @@ class Walking : public State
 public:
 	Walking() {};
 	~Walking() {};
-	void handleInput();
-	void update();
-
-	//can go from idle to jumping / climbing
-//	void jumping(PlayerFSM* a);
+	
+	//can go from idle to jumping / climbing 
+	void jumping(PlayerFSM* a);
 	void climbing(PlayerFSM* a);
 	void crouching(PlayerFSM* a);
 	void falling(PlayerFSM* a);

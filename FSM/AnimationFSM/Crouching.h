@@ -11,9 +11,7 @@ class Crouching : public State
 public:
 	Crouching() {};
 	~Crouching() {};
-	void handleInput();
-	void update();
-
+	
 	//can go from crouching to jumping / climbing
 	void jumping(PlayerFSM* a);
 	void walking(PlayerFSM* a);

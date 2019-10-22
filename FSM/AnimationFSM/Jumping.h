@@ -10,10 +10,10 @@ public:
 	~Jumping() {};
 	//can go to idling or climbing
 	void climbing(PlayerFSM* a);
-	//void landing(PlayerFSM* a);
+	void landing(PlayerFSM* a);
 	void idle(PlayerFSM* a);
-//	void walking(PlayerFSM* a);
-//	void crouching(PlayerFSM* a);
+	void walking(PlayerFSM* a);
+	void crouching(PlayerFSM* a);
 
 };
 

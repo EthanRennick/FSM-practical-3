@@ -1,1 +1,24 @@
 #pragma once
+
+#ifndef LANDING_H
+#define LANDING_H
+
+#include <State.h>
+
+class Landing : public State
+{
+public:
+	Landing() {};
+	~Landing() {};
+
+
+	//can go from idle to jumping / climbing
+	void jumping(PlayerFSM* a);
+	void crouching(PlayerFSM* a);
+	void idle(PlayerFSM* a);
+	void walking(PlayerFSM* a);
+
+
+};
+
+#endif // !IDLE_H

@@ -58,6 +58,14 @@ int main()
 				{
 					input.setCurrent(Input::Action::UP);
 				}
+				else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+				{
+					input.setCurrent(Input::Action::DOWN);
+				}
+				else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+				{
+					input.setCurrent(Input::Action::SPACE);
+				}
 				break;
 			default:
 				input.setCurrent(Input::Action::IDLE);

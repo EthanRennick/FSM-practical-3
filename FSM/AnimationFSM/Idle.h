@@ -14,9 +14,9 @@ public:
 	//can go from idle to all theeeese
 	void jumping(PlayerFSM* a);
 	void climbing(PlayerFSM* a);
-//	void falling(PlayerFSM* a);
-	//void walking(PlayerFSM* a);
-//	void crouching(PlayerFSM* a);
+	void falling(PlayerFSM* a);
+	void walking(PlayerFSM* a);
+	void crouching(PlayerFSM* a);
 
 };
 
