@@ -14,19 +14,22 @@ int main()
 	bool jumping = false;
 	// Load a sprite to display
 	sf::Texture texture;
-	if (!texture.loadFromFile("assets\\grid.png")) {
+	if (!texture.loadFromFile("assets\\spread.png")) {
 		DEBUG_MSG("Failed to load file");
 		return EXIT_FAILURE;
 	}
 
 	// Setup Players Default Animated Sprite
+	//some of these dont work
 	AnimatedSprite animated_sprite(texture);
-	animated_sprite.addFrame(sf::IntRect(3, 3, 84, 84));
-	animated_sprite.addFrame(sf::IntRect(88, 3, 84, 84));
-	animated_sprite.addFrame(sf::IntRect(173, 3, 84, 84));
-	animated_sprite.addFrame(sf::IntRect(258, 3, 84, 84));
-	animated_sprite.addFrame(sf::IntRect(343, 3, 84, 84));
-	animated_sprite.addFrame(sf::IntRect(428, 3, 84, 84));
+	animated_sprite.addFrame(sf::IntRect(0, 0, 35, 45)); //idle 1
+	animated_sprite.addFrame(sf::IntRect(70, 90, 50, 40)); //walking? 2 
+	animated_sprite.addFrame(sf::IntRect(125, 135, 45, 45)); //climbing 3
+	animated_sprite.addFrame(sf::IntRect(170, 0, 40, 49)); //jumping 4 
+	animated_sprite.addFrame(sf::IntRect(116, 0, 50, 47)); //falling 5 
+	animated_sprite.addFrame(sf::IntRect(335, 90, 50, 50)); //crouching 6 
+	animated_sprite.addFrame(sf::IntRect(0, 48, 40, 40)); //landing 7
+
 
 	// Setup the Player
 	Player player(animated_sprite);
@@ -49,6 +52,7 @@ int main()
 				if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 				{
 					input.setCurrent(Input::Action::LEFT);
+			
 				}
 				else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 				{

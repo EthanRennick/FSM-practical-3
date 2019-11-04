@@ -23,6 +23,7 @@ public:
 	void addFrame(IntRect&);
 	const int getCurrentFrame();
 	void update();
+	void setFrame(int t_frame);
 	
 private:
 	Clock m_clock;
